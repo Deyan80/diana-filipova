@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Диана Филипова: Империя от блясък</title>
+    <meta name="description" content="Диана Филипова – дизайнер, носителка на титли и създателка на корони. Империя от блясък, визия и международна елегантност." />
+
+    <meta property="og:title" content="Диана Филипова: Империя от блясък" />
+    <meta property="og:description" content="Диана Филипова и изкуството на короната. Дизайнер, носителка на Woman of the Universe II 2022 и създател на бранд FASHIONWAY." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="bg_BG" />
+    <meta property="og:image" content="diana-share.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Диана Филипова – Империя от блясък" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Диана Филипова: Империя от блясък" />
+    <meta name="twitter:description" content="Диана Филипова и изкуството на короната." />
+    <meta name="twitter:image" content="diana-share.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #07080d;
+            --bg2: #0f1118;
+            --paper: rgba(255,255,255,.05);
+            --paper-2: rgba(255,255,255,.10);
+            --line: rgba(255,255,255,.13);
+            --text: #f0ece2;
+            --muted: rgba(240,236,226,.68);
+            --gold: #c9a44e;
+            --gold-2: #e2c07a;
+            --gold-soft: rgba(201,164,78,.20);
+            --rose: #b87ca0;
+            --shadow: 0 28px 64px rgba(0,0,0,.52);
+            --radius: 20px;
+        }
+
+        [data-theme="light"] {
+            --bg: #f5f0e8;
+            --bg2: #fffcf7;
+            --paper: rgba(30,20,10,.05);
+            --paper-2: rgba(30,20,10,.09);
+            --line: rgba(30,20,10,.13);
+            --text: #1a140c;
+            --muted: rgba(26,20,12,.66);
+            --gold: #9a6f1e;
+            --gold-2: #b88a2f;
+            --gold-soft: rgba(154,111,30,.16);
+            --rose: #8a4d72;
+            --shadow: 0 20px 48px rgba(20,14,6,.14);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Cormorant Garamond', ui-serif, Georgia, serif;
+            color: var(--text);
+            line-height: 1.8;
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(ellipse 800px 600px at 5% 0%, rgba(201,164,78,.13), transparent 60%),
+                radial-gradient(ellipse 700px 500px at 95% 20%, rgba(184,124,160,.10), transparent 55%),
+                radial-gradient(ellipse 1000px 400px at 50% 100%, rgba(201,164,78,.06), transparent 60%),
+                linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+            background-attachment: scroll;
+            min-height: 100vh;
+        }
+
+        .wrap { max-width: 1140px; margin: 0 auto; padding: 32px 20px 80px; }
+
+        .topbar {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .kicker {
+            font-family: 'Jost', ui-sans-serif, sans-serif;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            font-size: 10.5px;
+            font-weight: 400;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 60px);
+            font-weight: 300;
+            line-height: 1.06;
+            letter-spacing: .015em;
+            font-style: italic;
+        }
+
+        h1 em { font-style: normal; font-weight: 600; color: var(--gold-2); }
+
+        .deck {
+            margin: 14px 0 0;
+            max-width: 62ch;
+            font-family: 'Jost', ui-sans-serif, sans-serif;
+            font-size: 14.5px;
+            font-weight: 300;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .pill, .lang-select {
+            border: 1px solid var(--line);
+            background: linear-gradient(160deg, var(--paper-2), var(--paper));
+            color: var(--text);
+            box-shadow: var(--shadow);
+            border-radius: 999px;
+            min-height: 40px;
+            padding: 9px 16px;
+            font-size: 12.5px;
+            font-family: 'Jost', ui-sans-serif, sans-serif;
+            font-weight: 400;
+            letter-spacing: .04em;
+        }
+
+        .pill {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform .1s, border-color .22s, background .22s, box-shadow .22s;
+        }
+        .pill:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: 0 8px 24px rgba(201,164,78,.18); }
+
+        .dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: var(--gold);
+            box-shadow: 0 0 0 4px var(--gold-soft);
+            flex-shrink: 0;
+        }
+        .dot.rose {
+            background: var(--rose);
+            box-shadow: 0 0 0 4px rgba(184,124,160,.18);
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            background: linear-gradient(170deg, var(--paper-2) 0%, var(--paper) 100%);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+        }
+
+        .hero-visual { position: relative; }
+        .hero-visual img {
+            display: block; width: 100%; height: 100%;
+            object-fit: cover; min-height: 640px;
+        }
+
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to right, transparent 55%, var(--bg) 100%);
+            pointer-events: none;
+        }
+
+        [data-theme="light"] .hero-overlay {
+            background: linear-gradient(to right, transparent 55%, var(--bg2) 100%);
+        }
+
+        .hero-badge {
+            position: absolute;
+            left: 20px; bottom: 20px;
+            padding: 9px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,.22);
+            background: rgba(8,9,14,.38);
+            color: #fff;
+            backdrop-filter: blur(12px);
+            font-family: 'Jost', ui-sans-serif, sans-serif;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+
+        .hero-copy { padding: 36px 32px 36px; }
+
+        .lead {
+            font-size: 21px;
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 22px;
+            line-height: 1.6;
+        }
+
+        .meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 24px 0 14px;
+        }
+
+        .meta-box {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 14px 16px;
+            background: rgba(255,255,255,.03);
+        }
+        .meta-box:hover { border-color: var(--gold-soft); background: var(--gold-soft); }
+
+        .meta-label {
+            display: block;
+            font-family: 'Jost', ui-sans-serif, sans-serif;
+            font-size: 10px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .meta-value { font-size: 16px; font-weight: 400; line-height: 1.45; }
+
+        article { padding: 8px 32px 36px; }
+
+        h2 {
+            margin: 30px 0 12px;
+            font-family: 'Jost', ui-sans-serif, sans-serif;
+            font-size: 10.5px;
+            letter-spacing: .24em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        h2::before { content: '⟡ '; opacity: .6; }
+
+        p { margin: 12px 0; font-size: 18.5px; font-weight: 300; }
+
+        .quote {
+            margin: 28px 0;
+            padding: 22px 24px 22px 26px;
+            border-left: 2px solid var(--gold);
+            border-radius: 16px;
+            background: var(--gold-soft);
+            font-size: 22px;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        figure { margin: 22px 0; }
+
+        .figure-card {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            overflow: hidden;
+            background: rgba(255,255,255,.03);
+            transition: transform .22s, box-shadow .22s;
+        }
+        .figure-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,.3); }
+
+        .figure-card img { width: 100%; display: block; height: auto; }
+
+        figcaption {
+            padding: 10px 14px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-family: 'Jost', ui-sans-serif, sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: .04em;
+            font-style: italic;
+        }
+
+        .gallery-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid var(--line);
+            margin: 32px 0;
+        }
+
+        .footer-note {
+            margin-top: 36px;
+            font-family: 'Jost', ui-sans-serif, sans-serif;
+            font-size: 11px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            opacity: .6;
+            text-align: center;
+        }
+
+        @media (max-width: 860px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-visual img { min-height: 420px; }
+            .hero-overlay { background: linear-gradient(to bottom, transparent 50%, var(--bg) 100%); }
+        }
+
+        @media (max-width: 680px) {
+            .meta, .gallery-2 { grid-template-columns: 1fr; }
+            .hero-copy, article { padding-left: 20px; padding-right: 20px; }
+            h1 { font-size: 34px; }
+        }
+    </style>
+</head>
+<body data-theme="dark">
+
+<div class="wrap">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div>
+            <p class="kicker" data-i18n="kicker">High-Life / Digital Portrait</p>
+            <h1 data-i18n="title">Империя от блясък:<br><em>Диана Филипова и изкуството на короната</em></h1>
+            <p class="deck" data-i18n="deck">В света на висшата естетика, където стилът не просто се носи, а се преживява. Короните не са аксесоар — те са кулминация на една естетическа философия.</p>
+        </div>
+
+        <div class="actions">
+            <button class="pill" id="musicBtn" type="button" title="Пусни/спри музика">
+                <span class="dot rose" aria-hidden="true"></span>
+                <span id="musicLabel">Музика: OFF</span>
+            </button>
+            <button class="pill" id="themeBtn" type="button" title="Смяна на тема">
+                <span class="dot" aria-hidden="true"></span>
+                <span data-i18n="theme">Тема</span>
+            </button>
+            <select class="lang-select" id="langSelect" aria-label="Избор на език">
+                <option value="bg">Български</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- MAIN CARD -->
+    <section class="card">
+        <div class="hero-grid">
+            <div class="hero-visual">
+                <img src="diana-01.jpg" alt="Диана Филипова – портрет" />
+                <div class="hero-overlay" aria-hidden="true"></div>
+                <div class="hero-badge" data-i18n="badge">Дизайнер · Woman of the Universe II · FASHIONWAY</div>
+            </div>
+
+            <div class="hero-copy">
+                <p class="lead" data-i18n="lead">В нейната вселена короните не са просто аксесоар. Те са кулминация. Завършек на една естетическа философия, в която жената е едновременно муза и архитект на собственото си присъствие.</p>
+
+                <div class="meta">
+                    <div class="meta-box">
+                        <span class="meta-label" data-i18n="metaTitleLabel">Бранд</span>
+                        <span class="meta-value" data-i18n="metaTitleValue">FASHIONWAY</span>
+                    </div>
+                    <div class="meta-box">
+                        <span class="meta-label" data-i18n="metaViceLabel">Титла</span>
+                        <span class="meta-value" data-i18n="metaViceValue">Woman of the Universe II 2022</span>
+                    </div>
+                    <div class="meta-box">
+                        <span class="meta-label" data-i18n="metaRoleLabel">Роля</span>
+                        <span class="meta-value" data-i18n="metaRoleValue">Дизайнер · Създател на корони · Инфлуенсър</span>
+                    </div>
+                    <div class="meta-box">
+                        <span class="meta-label" data-i18n="metaKnownLabel">Сцена</span>
+                        <span class="meta-value" data-i18n="metaKnownValue">Виена · Дубай · Милано</span>
+                    </div>
+                </div>
+
+                <p data-i18n="intro1">Филипова изгражда образи – силуети, които носят самочувствие и власт, облечени в материя, блясък и характер.</p>
+                <p data-i18n="intro2">Образована в Технически университет София и Vienna University of Economics and Business, тя преминава през корпоративния свят, преди да се върне към първичната си страст – дизайна.</p>
+            </div>
+        </div>
+
+        <article>
+            <figure class="figure-card">
+                <img src="diana-02.jpg" alt="Диана Филипова – дизайн" loading="lazy" />
+                <figcaption data-i18n="caption1">„Визията не е украса. Тя е позиция.“</figcaption>
+            </figure>
+
+            <h2 data-i18n="section1Title">Пътят към дизайна</h2>
+            <p data-i18n="section1P1">Кариерата ѝ не следва традиционните линии на модната индустрия. Образована в Технически университет София и Vienna University of Economics and Business, тя преминава през корпоративния свят, преди да се върне към първичната си страст – дизайна.</p>
+            <p data-i18n="section1P2">Този завой не е случаен, а стратегически. Резултатът е дизайнер, който мисли като предприемач и твори като артист.</p>
+
+            <div class="quote" data-i18n="quote">„Визията не е украса. Тя е позиция.“</div>
+
+            <h2 data-i18n="section2Title">Международната сцена</h2>
+            <p data-i18n="section2P1">Истинската ѝ сцена е международна. Виена, Дубай, Милано – градове, в които модата не е индустрия, а култура.</p>
+            <p data-i18n="section2P2">Нейният бранд FASHIONWAY се появява като естествено продължение на личната ѝ естетика – изчистена, но категорична, елегантна, но запомняща се.</p>
+
+            <div class="gallery-2">
+                <figure class="figure-card">
+                    <img src="diana-03.jpg" alt="Диана Филипова – корона" loading="lazy" />
+                    <figcaption data-i18n="caption2">Изкуството на короната – от конкурс до церемония.</figcaption>
+                </figure>
+                <figure class="figure-card">
+                    <img src="diana-04.jpg" alt="Диана Филипова – FASHIONWAY" loading="lazy" />
+                    <figcaption data-i18n="caption3">FASHIONWAY – визуален подпис на елегантността.</figcaption>
+                </figure>
+            </div>
+
+            <hr class="divider" />
+
+            <h2 data-i18n="section3Title">Изкуството на короната</h2>
+            <p data-i18n="section3P1">Именно там се раждат и короните – онези изящни произведения, които превръщат всяка носителка в събитие. Създадени за конкурси, церемонии и специални проекти, те са повече от бижу – те са визуален подпис.</p>
+            <p data-i18n="section3P2">От корона към влияние – Филипова не е просто дизайнер. Тя е носител на титли, включително „Woman of the Universe II 2022“.</p>
+
+            <h2 data-i18n="section4Title">От корона към влияние</h2>
+            <p data-i18n="section4P1">Наградите и присъствието ѝ отвъд подиума я утвърждават като инфлуенсър и лице на модерната европейска елегантност.</p>
+            <p data-i18n="section4P2">Тя не следва тенденции. Тя ги режисира.</p>
+
+            <figure class="figure-card">
+                <img src="diana-05.jpg" alt="Диана Филипова – гала" loading="lazy" />
+                <figcaption data-i18n="caption4">Когато поставя корона върху нечия глава, това е началото на една история.</figcaption>
+            </figure>
+
+            <h2 data-i18n="section5Title">Философията</h2>
+            <p data-i18n="section5P1">Нейната философия е проста, но категорична: визията определя възприятието. Това не е повърхностност, а стратегия.</p>
+            <p data-i18n="section5P2">В свят, в който първото впечатление е валута, Диана Филипова създава впечатления, които остават. И когато поставя корона върху нечия глава, това не е финалът на една визия – това е началото на една история.</p>
+
+            <p class="footer-note" data-i18n="footer">Луксозен дигитален портрет на Диана Филипова · High-Life Digital Portrait Series</p>
+        </article>
+    </section>
+</div>
+
+<audio id="bgMusic" preload="auto" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const body = document.body;
+        const themeBtn = document.getElementById('themeBtn');
+        const musicBtn = document.getElementById('musicBtn');
+        const musicLabel = document.getElementById('musicLabel');
+        const music = document.getElementById('bgMusic');
+        const langSelect = document.getElementById('langSelect');
+
+        // === ТЕМА ===
+        let currentTheme = localStorage.getItem('diana-theme') || 'dark';
+        body.setAttribute('data-theme', currentTheme);
+
+        themeBtn.addEventListener('click', () => {
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            body.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('diana-theme', currentTheme);
+        });
+
+        // === МУЗИКА ===
+        let musicReady = true;
+        music.addEventListener('error', () => { 
+            musicReady = false; 
+            console.warn('song.mp3 не е намерен');
+        });
+
+        function updateMusicLabel(isPlaying) {
+            const lang = langSelect.value;
+            if (lang === 'en') {
+                musicLabel.textContent = isPlaying ? 'Music: ON' : 'Music: OFF';
+            } else {
+                musicLabel.textContent = isPlaying ? 'Музика: ON' : 'Музика: OFF';
+            }
+        }
+
+        musicBtn.addEventListener('click', async () => {
+            if (!musicReady) {
+                alert(langSelect.value === 'bg' ? 
+                    'Файлът song.mp3 не е намерен в папката.' : 
+                    'song.mp3 file not found in the folder.');
+                return;
+            }
+
+            try {
+                if (music.paused) {
+                    await music.play();
+                    updateMusicLabel(true);
+                } else {
+                    music.pause();
+                    updateMusicLabel(false);
+                }
+            } catch(e) {
+                alert(langSelect.value === 'bg' ? 
+                    'Моля, натисни отново.' : 
+                    'Please tap again.');
+            }
+        });
+
+        // === ПРЕВОДИ ===
+        const translations = {
+            bg: {
+                kicker: "High-Life / Digital Portrait",
+                title: "Империя от блясък: Диана Филипова и изкуството на короната",
+                deck: "В света на висшата естетика, където стилът не просто се носи, а се преживява. Короните не са аксесоар — те са кулминация на една естетическа философия.",
+                theme: "Тема",
+                badge: "Дизайнер · Woman of the Universe II · FASHIONWAY",
+                lead: "В нейната вселена короните не са просто аксесоар. Те са кулминация. Завършек на една естетическа философия, в която жената е едновременно муза и архитект на собственото си присъствие.",
+                metaTitleLabel: "Бранд", metaTitleValue: "FASHIONWAY",
+                metaViceLabel: "Титла", metaViceValue: "Woman of the Universe II 2022",
+                metaRoleLabel: "Роля", metaRoleValue: "Дизайнер · Създател на корони · Инфлуенсър",
+                metaKnownLabel: "Сцена", metaKnownValue: "Виена · Дубай · Милано",
+                intro1: "Филипова изгражда образи – силуети, които носят самочувствие и власт, облечени в материя, блясък и характер.",
+                intro2: "Образована в Технически университет София и Vienna University of Economics and Business, тя преминава през корпоративния свят, преди да се върне към първичната си страст – дизайна.",
+                caption1: "„Визията не е украса. Тя е позиция.“",
+                section1Title: "Пътят към дизайна",
+                section1P1: "Кариерата ѝ не следва традиционните линии на модната индустрия. Образована в Технически университет София и Vienna University of Economics and Business, тя преминава през корпоративния свят, преди да се върне към първичната си страст – дизайна.",
+                section1P2: "Този завой не е случаен, а стратегически. Резултатът е дизайнер, който мисли като предприемач и твори като артист.",
+                quote: "„Визията не е украса. Тя е позиция.“",
+                section2Title: "Международната сцена",
+                section2P1: "Истинската ѝ сцена е международна. Виена, Дубай, Милано – градове, в които модата не е индустрия, а култура.",
+                section2P2: "Нейният бранд FASHIONWAY се появява като естествено продължение на личната ѝ естетика – изчистена, но категорична, елегантна, но запомняща се.",
+                caption2: "Изкуството на короната – от конкурс до церемония.",
+                caption3: "FASHIONWAY – визуален подпис на елегантността.",
+                section3Title: "Изкуството на короната",
+                section3P1: "Именно там се раждат и короните – онези изящни произведения, които превръщат всяка носителка в събитие. Създадени за конкурси, церемонии и специални проекти, те са повече от бижу – те са визуален подпис.",
+                section3P2: "От корона към влияние – Филипова не е просто дизайнер. Тя е носител на титли, включително „Woman of the Universe II 2022“.",
+                section4Title: "От корона към влияние",
+                section4P1: "Наградите и присъствието ѝ отвъд подиума я утвърждават като инфлуенсър и лице на модерната европейска елегантност.",
+                section4P2: "Тя не следва тенденции. Тя ги режисира.",
+                caption4: "Когато поставя корона върху нечия глава, това е началото на една история.",
+                section5Title: "Философията",
+                section5P1: "Нейната философия е проста, но категорична: визията определя възприятието. Това не е повърхностност, а стратегия.",
+                section5P2: "В свят, в който първото впечатление е валута, Диана Филипова създава впечатления, които остават. И когато поставя корона върху нечия глава, това не е финалът на една визия – това е началото на една история.",
+                footer: "Луксозен дигитален портрет на Диана Филипова · High-Life Digital Portrait Series"
+            },
+            en: {
+                kicker: "High-Life / Digital Portrait",
+                title: "Empire of Brilliance: Diana Filipova and the Art of the Crown",
+                deck: "In the world of high aesthetics, where style is not just worn but experienced. Crowns are not an accessory — they are the culmination of an aesthetic philosophy.",
+                theme: "Theme",
+                badge: "Designer · Woman of the Universe II · FASHIONWAY",
+                lead: "In her universe, crowns are not just an accessory. They are the culmination. The completion of an aesthetic philosophy in which the woman is both muse and architect of her own presence.",
+                metaTitleLabel: "Brand", metaTitleValue: "FASHIONWAY",
+                metaViceLabel: "Title", metaViceValue: "Woman of the Universe II 2022",
+                metaRoleLabel: "Role", metaRoleValue: "Designer · Crown Creator · Influencer",
+                metaKnownLabel: "Stage", metaKnownValue: "Vienna · Dubai · Milan",
+                intro1: "Filipova builds images – silhouettes that carry confidence and power, dressed in matter, brilliance and character.",
+                intro2: "Educated at the Technical University of Sofia and Vienna University of Economics and Business, she passed through the corporate world before returning to her primal passion – design.",
+                caption1: "\"Vision is not decoration. It is a position.\"",
+                section1Title: "The Path to Design",
+                section1P1: "Her career does not follow the traditional lines of the fashion industry. Educated at the Technical University of Sofia and Vienna University of Economics and Business, she passed through the corporate world before returning to her primal passion – design.",
+                section1P2: "This turn is not accidental, but strategic. The result is a designer who thinks like an entrepreneur and creates like an artist.",
+                quote: "\"Vision is not decoration. It is a position.\"",
+                section2Title: "The International Stage",
+                section2P1: "Her true stage is international. Vienna, Dubai, Milan – cities where fashion is not an industry, but a culture.",
+                section2P2: "Her brand FASHIONWAY appears as a natural extension of her personal aesthetics – clean, yet categorical, elegant, yet memorable.",
+                caption2: "The art of the crown – from competition to ceremony.",
+                caption3: "FASHIONWAY – the visual signature of elegance.",
+                section3Title: "The Art of the Crown",
+                section3P1: "It is there that the crowns are born – those exquisite creations that turn every wearer into an event. Created for competitions, ceremonies and special projects, they are more than jewelry – they are a visual signature.",
+                section3P2: "From crown to influence – Filipova is not just a designer. She is a title holder, including “Woman of the Universe II 2022”.",
+                section4Title: "From Crown to Influence",
+                section4P1: "Her awards and presence beyond the runway establish her as an influencer and face of modern European elegance.",
+                section4P2: "She does not follow trends. She directs them.",
+                caption4: "When she places a crown on someone's head, this is the beginning of a story.",
+                section5Title: "The Philosophy",
+                section5P1: "Her philosophy is simple but categorical: vision determines perception. This is not superficiality, but strategy.",
+                section5P2: "In a world where first impression is currency, Diana Filipova creates impressions that last. And when she places a crown on someone's head, it is not the end of a vision – it is the beginning of a story.",
+                footer: "Luxurious digital portrait of Diana Filipova · High-Life Digital Portrait Series"
+            }
+        };
+
+        function applyLanguage(lang) {
+            const dict = translations[lang] || translations.bg;
+            document.documentElement.lang = lang;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key] !== undefined) {
+                    el.textContent = dict[key];
+                }
+            });
+
+            // Специално обновяване на h1 (защото съдържа <em>)
+            const h1 = document.querySelector('h1');
+            if (lang === 'bg') {
+                h1.innerHTML = 'Империя от блясък:<br><em>Диана Филипова и изкуството на короната</em>';
+            } else {
+                h1.innerHTML = 'Empire of Brilliance:<br><em>Diana Filipova and the Art of the Crown</em>';
+            }
+
+            localStorage.setItem('diana-lang', lang);
+            updateMusicLabel(!music.paused);
+        }
+
+        // Зареждане на запазен език
+        const savedLang = localStorage.getItem('diana-lang') || 'bg';
+        langSelect.value = savedLang;
+        applyLanguage(savedLang);
+
+        langSelect.addEventListener('change', (e) => {
+            applyLanguage(e.target.value);
+        });
+
+        // Първоначално обновяване на етикета за музика
+        updateMusicLabel(false);
+    });
+</script>
+</body>
+</html>
